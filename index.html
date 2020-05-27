@@ -20,6 +20,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/config.js"></script>
     <script src="js/CamControl.js"></script>
+    <script src="js/iottalk/csmapi.js"></script>
+    <script src="js/iottalk/dan.js"></script>
+    <script src="js/iottalk/dai.js"></script>
+    <script src="js/iottalk/ida.js"></script>
   </head>
 
   <body style="background-color: #e9e9e9;">
@@ -65,25 +69,25 @@
             </div>
               
             <div class="col-xs-2">
-              <button class="icons-2 material-button" onclick="ImgMoveUp()">
+              <button class="icons-2 material-button" onclick="dan.push('Up-I', [4, 'iottalk'])">
 						    <div class="top-triangle"></div>
               </button>
             </div>
               
             <div class="col-xs-2">
-              <button class="icons-2 material-button" onclick="ImgMoveDown()">	
+              <button class="icons-2 material-button" onclick="dan.push('Down-I', [1, 'iottalk'])">	
 						    <div class="bottom-triangle"></div>
               </button>
             </div>
               
             <div class="col-xs-2">
-              <button class="icons-3 material-button" onclick="ImgMoveLeft()">
+              <button class="icons-3 material-button" onclick="dan.push('Left-I', [2, 'iottalk'])">
 						    <div class="left-triangle"></div>
 		          </button>
             </div>
               
             <div class="col-xs-2">
-		          <button class="icons-3 material-button" onclick="ImgMoveRight()">
+		          <button class="icons-3 material-button" onclick="dan.push('Right-I', [3, 'iottalk'])">
                 <div class="right-triangle"></div>
               </button>
             </div> 
@@ -92,7 +96,7 @@
 
         <div class="col-sm-5">      
           <iframe id="iframe1"  frameborder="0" allowtransparency="true"  scrolling="yes"></iframe>
-          <iframe id="iframe2"  frameborder="0" allowtransparency="true"  scrolling="yes"></iframe>
+          <div style="transform:scale(0.6);transform-origin:0 0;"><iframe id="iframe2"  frameborder="0" allowtransparency="true"></iframe></div>
         </div>
 
       </div>
